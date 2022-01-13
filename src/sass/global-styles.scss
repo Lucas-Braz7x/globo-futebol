@@ -1,0 +1,29 @@
+@import './variables.scss';
+
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  max-width: 1300px;
+}
+
+@font-face {
+  font-family: BentonSansCondensed-Bold;
+  src: url($BentonSansCondensed-Bold);
+}
+
+@font-face {
+  font-family: BentonSansCondensed-Regular;
+  src: url($BentonSansCondensed-Regular);
+}
+
+@font-face {
+  font-family: BentonSansCondensed-Italic;
+  src: url($BentonSansCondensed-Italic);
+}
