@@ -15,56 +15,74 @@ label{
   align-items: center;
   gap: 11px;
   height: 18px;
-}
-input[type=checkbox] {
-  position: relative;
-  cursor: pointer;
-}
-input[type=checkbox]:before {
-  box-sizing: border-box;
-  content: "";
-  display: block;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 0;
-  left: 0;
-  background-color:white;
-  border:2px solid #B4DDC1;
-  transition: border .3s;
+
+  input[type=checkbox] {
+    position: relative;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+  }
+  input[type=checkbox]:before {
+    box-sizing: border-box;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    background-color:white;
+    border:2px solid #B4DDC1;
+    transition: border .3s;
+  }
+
+  input[type=checkbox]:hover:before{
+    border-color: #006437;
+  }
+  input[type=checkbox]:checked:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 0;
+    left: 0;
+    background-color:#B4DDC1;
+  }
+
+  input[type=checkbox]:hover:checked:before{
+    background: #006437;
+    border-color: transparent;
+
+  }
+
+  input[type=checkbox]:checked:after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    top: 2px;
+    left: 6px;
+  }
 }
 
-input[type=checkbox]:hover:before{
-  border-color: #006437;
-}
-input[type=checkbox]:checked:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 18px;
-  height: 18px;
-  top: 0;
-  left: 0;
-  background-color:#B4DDC1;
-}
+@media (max-width: $small-breakpoint) {
+  .checkbox-container{
+    height: 41px;
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+    height: 18px;
 
-input[type=checkbox]:hover:checked:before{
-  background: #006437;
-  border-color: transparent;
+    span{
+      height: 41px;
+    }
+  }
 
-}
-
-input[type=checkbox]:checked:after {
-  content: "";
-  display: block;
-  width: 5px;
-  height: 10px;
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 2px;
-  left: 6px;
 }

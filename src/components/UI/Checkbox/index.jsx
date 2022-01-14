@@ -12,6 +12,6 @@ export const Checkbox = ({ content, isChecked }) => {
 }
 
 Checkbox.propTypes = {
-  isChecked: prop_types.func,
+  isChecked: prop_types.func.isRequired,
   content: prop_types.string.isRequired,
 }

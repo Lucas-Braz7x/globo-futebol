@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './styles.scss';
+import prop_types from 'prop-types';
 
-/*eslint-disable*/
 export const Dropdown = ({ title, filter, onFilter }) => {
   const [dropdownValue, setDropdownValue] = useState(title);
   const dropdownRef = useRef();
@@ -42,4 +42,11 @@ export const Dropdown = ({ title, filter, onFilter }) => {
       </nav>
     </div>
   )
+}
+
+
+Dropdown.propTypes = {
+  filter: prop_types.string.isRequired,
+  title: prop_types.string.isRequired,
+  onFilter: prop_types.func.isRequired
 }
