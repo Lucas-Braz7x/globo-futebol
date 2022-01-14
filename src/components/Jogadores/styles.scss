@@ -1,0 +1,77 @@
+@import '../../sass/variables.scss';
+
+.container{
+  position: absolute;
+  top: 774px;
+  bottom: 0;
+  width: 100vw;
+  height: auto;
+  background: #E0EFE5;
+}
+.filters{
+  background: $second-color;
+  width: 100vw;
+  height: 80px;
+  padding: 15px 339px 15px 311px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  .filters-check{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+}
+
+@media (max-width:$large-breakpoint) {
+  .filters{
+    height: auto;
+    flex-direction: column;
+    justify-content: none;
+    align-items: none;
+
+    .filters-check{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 280px;
+      gap: 20px;
+
+    }
+  }
+}
+
+@media (max-width:$small-breakpoint) {
+  .container{
+    top:600px;
+  }
+
+  .filters{
+    padding: 0 100px 9px 100px;
+
+    .filters-check{
+      height: 41px;
+      gap: 20px;
+    }
+  }
+
+}
+
+@media (max-width: $mini-breakpoint){
+  .container{
+    top:532px;
+  }
+  .filters{
+    padding: 0 20px 20px 15px;
+
+    .filters-check{
+      width: auto;
+      padding-left: 0px;
+      gap: 20px;
+    }
+  }
+}
