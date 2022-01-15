@@ -1,6 +1,5 @@
 @import './variables.scss';
 
-
 *{
   margin: 0;
   padding: 0;
@@ -10,20 +9,22 @@
 
 body {
   -webkit-font-smoothing: antialiased;
-  max-width: 1300px;
 }
 
 @font-face {
   font-family: BentonSansCondensed-Bold;
   src: url($BentonSansCondensed-Bold);
+  font-display: swap;
 }
 
 @font-face {
   font-family: BentonSansCondensed-Regular;
   src: url($BentonSansCondensed-Regular);
+  font-display: swap;
 }
 
 @font-face {
   font-family: BentonSansCondensed-Italic;
   src: url($BentonSansCondensed-Italic);
+  font-display: swap;
 }
