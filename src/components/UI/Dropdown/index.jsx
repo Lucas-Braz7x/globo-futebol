@@ -11,12 +11,14 @@ export const Dropdown = ({ title, filter, onFilter }) => {
     onFilter(dropdownValue);
   }, [dropdownValue])
 
-  const handleActive = () => setActive(!active);
+  const handleActive = () => {
+    setActive(!active);
+  };
 
-  const handleDropdownValue = e => {
-    let valor = dropdownValue;
-    setDropdownValue(e.target.textContent);
-    e.target.textContent = valor;
+  const handleDropdownValue = event => {
+    const valor = dropdownValue;
+    setDropdownValue(event.target.textContent);
+    event.target.textContent = valor;
     handleActive(!active);
   };
 
@@ -29,24 +31,27 @@ export const Dropdown = ({ title, filter, onFilter }) => {
   })
 
   return (
-    <div onClick={handleActive} className={`menu-dropdown ${active ? "open" : ""}`}>
-      <span>{dropdownValue}</span>
-      <img src={process.env.PUBLIC_URL + '/Images/seta-baixo.svg'} alt="" />
-      <nav
-        className={`menu ${active ? "active" : ""}`}
-        ref={dropdownRef}
-      >
-        <ul>
-          {handleFilters()}
-        </ul>
-      </nav>
-    </div>
+    <>
+      <div onClick={handleActive} className={`menu-dropdown ${active ? "open" : ""}`}>
+        <span>{dropdownValue}</span>
+        <img src={process.env.PUBLIC_URL + '/Images/seta-baixo.svg'} alt="" />
+        <nav
+          className={`menu ${active ? "active" : ""}`}
+          ref={dropdownRef}
+        >
+          <ul>
+            {handleFilters()}
+          </ul>
+        </nav>
+      </div>
+      <div onClick={handleActive} className={`${active ? "overlay" : ""}`}></div>
+    </>
   )
 }
 
 
 Dropdown.propTypes = {
-  filter: prop_types.string.isRequired,
+  filter: prop_types.array.isRequired,
   title: prop_types.string.isRequired,
   onFilter: prop_types.func.isRequired
 }
