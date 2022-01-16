@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "https://globo-futebol.vercel.app/static/css/main.0247b4b0.css",
+    "main.js": "https://globo-futebol.vercel.app/static/js/main.2387d8e2.js",
+    "static/media/img-header.jpg": "https://globo-futebol.vercel.app/static/media/img-header.1dcba7cb8521c6e8a2d4.jpg",
+    "static/media/BentonSansCondensed-Italic.otf": "https://globo-futebol.vercel.app/static/media/BentonSansCondensed-Italic.a4260240fa228f997894.otf",
+    "static/media/BentonSansCondensed-Bold.otf": "https://globo-futebol.vercel.app/static/media/BentonSansCondensed-Bold.9344f48c541685c610fb.otf",
+    "static/media/BentonSansCondensed-Regular.otf": "https://globo-futebol.vercel.app/static/media/BentonSansCondensed-Regular.d5f790ff88d0ba972be1.otf",
+    "static/media/fechar-hover.svg": "https://globo-futebol.vercel.app/static/media/fechar-hover.82bbf124dad91a586b75.svg",
+    "static/media/fechar.svg": "https://globo-futebol.vercel.app/static/media/fechar.6755a62cf0b2c59ba5de.svg",
+    "static/media/saiba-mais-hover.svg": "https://globo-futebol.vercel.app/static/media/saiba-mais-hover.45c761f5bbd1fbde83e4.svg",
+    "static/media/saiba-mais.svg": "https://globo-futebol.vercel.app/static/media/saiba-mais.d442ffdc137cb3aa660d.svg",
+    "index.html": "https://globo-futebol.vercel.app/index.html",
+    "static/media/seta-direita.svg": "https://globo-futebol.vercel.app/static/media/seta-direita.7a7e8ee0ec4e98b7311ec6d7385b5eab.svg",
+    "static/media/seta-esquerda.svg": "https://globo-futebol.vercel.app/static/media/seta-esquerda.e928b8e22bb9e4055c5a1c4836078045.svg",
+    "main.0247b4b0.css.map": "https://globo-futebol.vercel.app/static/css/main.0247b4b0.css.map",
+    "main.2387d8e2.js.map": "https://globo-futebol.vercel.app/static/js/main.2387d8e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0247b4b0.css",
+    "static/js/main.2387d8e2.js"
+  ]
+}
