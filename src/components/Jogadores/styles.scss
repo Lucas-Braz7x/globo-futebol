@@ -5,6 +5,7 @@
   top: 774px;
   bottom: 0;
   width: 100vw;
+  min-height: 460px;
   height: auto;
   background: $background-color;
 }
@@ -27,7 +28,7 @@
 
 }
 
-@media (max-width:$extra-medium-breakpoint) {
+@media (max-width:1259px) {
   .filters{
     height: auto;
     flex-direction: column;

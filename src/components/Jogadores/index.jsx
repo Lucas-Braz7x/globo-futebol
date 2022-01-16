@@ -8,11 +8,11 @@ import {
   titleFilterPosition
 } from '../../constants/Filtros';
 
-import { Dropdown } from '../UI/Dropdown';
+import { Dropdown } from '../Ui/Dropdown';
 import { PlayerCard } from '../PlayerCard';
-import { Checkbox } from '../UI/Checkbox';
-import { Divisor } from '../UI/Divisor';
-import Modal from '../UI/Modal';
+import { Checkbox } from '../Ui/Checkbox';
+import { Divisor } from '../Ui/Divisor';
+import Modal from '../Ui/Modal';
 import { formatDropdownOption, handleOpenModal } from '../../utils';
 
 export const Jogadores = () => {
@@ -34,14 +34,13 @@ export const Jogadores = () => {
   }, [])
 
   useEffect(() => {
-
     let filteredData = [];
 
     if (filterPosition === titleFilterPosition) {
       filteredData = data;
     } else {
       filteredData = data.filter(
-        noticia => noticia.posicao === filterPosition
+        position => position.posicao === filterPosition
       );
     }
 
@@ -78,7 +77,7 @@ export const Jogadores = () => {
     <div className='container'>
       <div className='filters'>
         <Dropdown
-          onFilter={e => setFilterPosition(e)}
+          onFilter={e => setFilterPosition(e.trim())}
           title={titleFilterPosition}
           filter={filterPositionOptions}
         />
