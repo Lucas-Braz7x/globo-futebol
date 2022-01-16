@@ -61,7 +61,7 @@ export const Jogadores = () => {
   }, [filterPosition, filterAge, isCheckedGols, isCheckedFinals])
 
   const getContent = useCallback(async () => {
-    const response = await fetch(`${process.env.PUBLIC_URL}/server/libertadores-palmeiras-teste-dev.json`, {
+    const response = await fetch(`${process.env.PUBLIC_URL}/Server/libertadores-palmeiras-teste-dev.json`, {
       headers: {
         'Content-Type': 'application/json',
         'Cache-Control': 'max-age=31536000',

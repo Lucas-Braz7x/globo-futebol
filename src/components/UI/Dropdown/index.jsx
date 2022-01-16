@@ -37,7 +37,7 @@ export const Dropdown = ({ title, filter, onFilter }) => {
     <>
       <div onClick={handleActive} className={`menu-dropdown ${active ? "open" : ""}`}>
         <span>{dropdownValue}</span>
-        <img src={process.env.PUBLIC_URL + '/Images/seta-baixo.svg'} alt="" />
+        <img src={process.env.PUBLIC_URL + '/Images/icones/seta-baixo.svg'} alt="Ícone seta para baixo" />
         <nav
           className={`menu ${active ? "active" : ""}`}
           ref={dropdownRef}

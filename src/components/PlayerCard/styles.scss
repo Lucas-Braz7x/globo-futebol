@@ -81,3 +81,9 @@
     padding: 50px 40px 44px 40px;
   }
 }
+
+@media(max-width: $micro-breakpoint){
+  .card-container{
+    padding: 17px 20px 14px 20px;
+  }
+}
