@@ -73,6 +73,18 @@
     top:532px;
   }
   .filters{
+    padding: 0 46px 18px 46px;
+
+    .filters-check{
+      width: auto;
+      padding-left: 0px;
+      gap: 20px;
+    }
+  }
+}
+
+@media (max-width: $micro-breakpoint){
+  .filters{
     padding: 0 20px 9px 20px;
 
     .filters-check{
