@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "https://lucas-braz7x.github.io/globo-futebol/static/css/main.0db0a9b6.css",
+    "main.css": "https://lucas-braz7x.github.io/globo-futebol/static/css/main.033e3e0f.css",
     "main.js": "https://lucas-braz7x.github.io/globo-futebol/static/js/main.c1fc4014.js",
     "static/media/img-header.jpg": "https://lucas-braz7x.github.io/globo-futebol/static/media/img-header.1dcba7cb8521c6e8a2d4.jpg",
     "static/media/BentonSansCondensed-Italic.otf": "https://lucas-braz7x.github.io/globo-futebol/static/media/BentonSansCondensed-Italic.a4260240fa228f997894.otf",
@@ -13,11 +13,11 @@
     "index.html": "https://lucas-braz7x.github.io/globo-futebol/index.html",
     "static/media/seta-direita.svg": "https://lucas-braz7x.github.io/globo-futebol/static/media/seta-direita.7a7e8ee0ec4e98b7311ec6d7385b5eab.svg",
     "static/media/seta-esquerda.svg": "https://lucas-braz7x.github.io/globo-futebol/static/media/seta-esquerda.e928b8e22bb9e4055c5a1c4836078045.svg",
-    "main.0db0a9b6.css.map": "https://lucas-braz7x.github.io/globo-futebol/static/css/main.0db0a9b6.css.map",
+    "main.033e3e0f.css.map": "https://lucas-braz7x.github.io/globo-futebol/static/css/main.033e3e0f.css.map",
     "main.c1fc4014.js.map": "https://lucas-braz7x.github.io/globo-futebol/static/js/main.c1fc4014.js.map"
   },
   "entrypoints": [
-    "static/css/main.0db0a9b6.css",
+    "static/css/main.033e3e0f.css",
     "static/js/main.c1fc4014.js"
   ]
 }
