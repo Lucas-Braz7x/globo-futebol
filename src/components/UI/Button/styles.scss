@@ -7,15 +7,15 @@ button{
   height: 28px;
   border-radius: 14px;
 
-  background: $sub-title-color;
+  background: $light-text-color;
 
   span{
     display: flex;
 
     width: 52px;
     height: 18px;
-    font-size: 15px;
-    font-family: BentonSansCondensed-Italic;
+    font-size: $font-size-ex-tiny;
+    font-family: BentonSansCondensed-Italic, sans-serif;
     letter-spacing: .6px;
     line-height: 15.6px;
 

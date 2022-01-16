@@ -6,7 +6,7 @@ import {
   filterPositionOptions,
   titleFilterAge,
   titleFilterPosition
-} from '../constants/Filtros';
+} from '../../constants/Filtros';
 
 import { Dropdown } from '../UI/Dropdown';
 import { PlayerCard } from '../PlayerCard';

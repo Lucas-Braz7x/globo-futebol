@@ -25,17 +25,29 @@ const Modal = ({ setPlayerId, id, data, open, onClose }) => {
     }
   }, [onClose]);
 
-
-  const cardModal = document.querySelector('.card-modal');
   const handleNextPlayer = (id) => {
+    const cardModal = document.querySelector('.card-modal');
+    cardModal.style.animation = 'slide-right .3s forwards';
     id === (data.length - 1) ? setPlayerId(0) : setPlayerId((s) => s + 1);
+
+    handleRemoveAnimation(cardModal);
+
   }
-  const handlePreviousPlayer = (id, element) => {
-    console.log(element)
+  const handlePreviousPlayer = (id) => {
+    const cardModal = document.querySelector('.card-modal');
+    cardModal.style.animation = 'slide-left .3s forwards';
     id === 0 ? setPlayerId(data.length - 1) : setPlayerId((s) => s - 1);
+
+    handleRemoveAnimation(cardModal);
   }
 
   if (!open) return null;
+
+  const handleRemoveAnimation = element => {
+    setTimeout(() => {
+      element.style.animation = 'none';
+    }, 400);
+  }
 
   const onOverlayClick = () => {
     onClose();
@@ -60,8 +72,9 @@ const Modal = ({ setPlayerId, id, data, open, onClose }) => {
               </div>
               <div className='card-modal-position'>
                 <span>{data[id].posicao}</span>
-                {window.screen.width < 650 && <span><pre>|</pre></span>}
-                <span> {data[id].idade}anos</span>
+                <span>
+                  {window.screen.width < 650 && " | "} {data[id].idade} anos
+                </span>
               </div>
               <div className='grafico-component'>
                 <Grafico
@@ -71,23 +84,19 @@ const Modal = ({ setPlayerId, id, data, open, onClose }) => {
                 />
               </div>
             </div>
-
             <div>
               <h2>{data[id].nome}</h2>
               <div className='card-modal-text'>
-                <p className='row'>
-                  {data[id].texto}
-                  {data[id].texto}
+                <p className='card-modal-row'>
                   {data[id].texto}
                 </p>
               </div>
             </div>
-
-            <div className='buttons'>
+            <div className='card-modal-buttons'>
               <Button>
                 <div
                   className='button-content previous'
-                  onClick={() => { handlePreviousPlayer(id, cardModal) }}
+                  onClick={() => { handlePreviousPlayer(id) }}
                 >
                   <ArrowLeft
                     className='arrow-left'

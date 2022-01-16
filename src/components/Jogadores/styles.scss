@@ -6,7 +6,7 @@
   bottom: 0;
   width: 100vw;
   height: auto;
-  background: #E0EFE5;
+  background: $background-color;
 }
 .filters{
   background: $second-color;
@@ -27,7 +27,7 @@
 
 }
 
-@media (max-width:$large-breakpoint) {
+@media (max-width:$extra-medium-breakpoint) {
   .filters{
     height: auto;
     flex-direction: column;
@@ -42,6 +42,12 @@
       gap: 20px;
 
     }
+  }
+}
+
+@media(max-width: $medium-breakpoint){
+  .filters{
+    padding: 15px 100px 30px 100px;
   }
 }
 
@@ -66,7 +72,7 @@
     top:532px;
   }
   .filters{
-    padding: 0 20px 20px 15px;
+    padding: 0 20px 9px 20px;
 
     .filters-check{
       width: auto;

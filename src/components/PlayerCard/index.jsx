@@ -19,7 +19,7 @@ export const PlayerCard = ({ id, foto, nome, posicao, idade, jogos, gols, handle
           <p>{nome}</p>
         </div>
 
-        <span>{posicao} | {idade}</span>
+        <span>{posicao} | {idade} anos</span>
         <Grafico
           jogos={jogos}
           gols={gols}

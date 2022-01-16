@@ -22,7 +22,7 @@
   .header-title{
     color: $second-color;
     background: $primary-color;
-    font-family: BentonSansCondensed-Bold, sans-serif, monospace;
+    font-family: BentonSansCondensed-Bold, sans-serif, sans-serif, monospace;
 
     max-width: 407px;
     height: 155px;
@@ -31,7 +31,8 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 89px, 308px 89px, 308px 100%, 0% 100%);
 
     h1{
-      font-size: 60px;
+      font-weight: normal;
+      font-size: $font-size-max;
       line-height: 65px;
       letter-spacing: 1.5px;
       margin: 11px 22px 7px 19px;
@@ -49,12 +50,12 @@
 
     margin-top: 20px;
 
-    font-size: 20px;
+    font-size: $font-size-medium;
     line-height: 25px;
     letter-spacing: .5px;
-    font-family: BentonSansCondensed-Regular, monospace,  sans-serif ;
-    font-weight: 400;
-    color: $sub-title-color;
+    font-family: BentonSansCondensed-Regular, sans-serif, monospace,  sans-serif ;
+    font-weight: 100;
+    color: $light-text-color;
 
     span{
       white-space: nowrap;
@@ -70,7 +71,7 @@
 
     span{
       color: $publication-date;
-      font-size: 12px;
+      font-size: $font-size-micro;
       font-family: Arial;
       font-weight: bold;
       line-height: 12px;
@@ -88,7 +89,7 @@
       height: 183px;
       color: $second-color;
       font-size: 19px;
-      font-family: Arial;
+      font-family: Arial, sans-serif;
       font-weight: normal;
       line-height: 27px;
     }
@@ -115,16 +116,16 @@
     .header-subTitle{
       width:290px;
       height: 40px;
-      font-size: 15px;
       line-height: 22px;
       letter-spacing: .4px;
+      font-size: $font-size-small;
     }
 
     .header-content{
       top: 280px;
       left: 60px;
       span{
-        font-size: 10px;
+        font-size: $font-size-nano;
         line-height: 12px;
         letter-spacing: 0;
         text-transform: uppercase;
@@ -136,9 +137,7 @@
       p{
         width: 300px;
         height: 183px;
-        font-size: 15px;
-        font-family: Arial;
-        font-weight: normal;
+        font-size: $font-size-ex-tiny;
         line-height: 27px;
       }
     }
@@ -166,7 +165,7 @@
       h1{
         width: 183px;
         height: 68px;
-        font-size: 30px;
+        font-size: $font-size-large;
         line-height: 32px;
         letter-spacing: 0.75px;
         margin: 0;
@@ -178,33 +177,33 @@
 
       margin-top: 10px;
 
-      font-size: 15px;
+      font-size: $font-size-ex-tiny;
       line-height: 18px;
       letter-spacing: .38px;
-      font-weight: 400;
-      color: $sub-title-color;
-      text-transform: none;
+      font-weight: normal;
+      color: $second-color;
     }
     .header-content{
       position: absolute;
-      top: 263px;
+      top: 244px;
       left: 20px;
       right: 20px;
+      padding-top: 19px;;
 
+      display: flex;
+      flex-direction: column;
       gap: 19px;
 
       text-transform: none;
 
       span{
         margin: 0;
+        height: 12px;
 
         color: $card-graph-color;
-        font-size: 10px;
-        font-family: Arial;
-        font-weight: bold;
+        font-size: $font-size-nano;
         line-height: 12px;
         letter-spacing: 0;
-
         text-transform: none;
       }
 
@@ -212,28 +211,18 @@
         height: 208px;
         width: 280px;
         color: $primary-color;
-        font-size: 14px;
+        font-size: $font-size-tiny;
         line-height: 24px;
-        margin-bottom: 30px;
       }
     }
   }
 }
 @media(max-width: $micro-breakpoint){
   .header{
-    .header-subTitle{
-      width: 85%;
-    }
+    width: 320px;
     .header-content{
-      left:10px;
+      left:20px;
       right: 0;
-      span{
-        width: 90%;
-      }
-      p{
-        width: 90%;
-        height: 500px;
-      }
     }
   }
 }
