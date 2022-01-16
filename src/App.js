@@ -1,10 +1,7 @@
-/* eslint-disable*/
-function App() {
-  return (
-    <div className="App">
-      <h1>Bem-vindo</h1>
-    </div>
-  );
-}
+import React from 'react';
+import './sass/global-styles.scss';
+import { Home } from './pages/Home';
+
+const App = () => <Home />
 
 export default App;

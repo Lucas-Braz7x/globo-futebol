@@ -66,7 +66,7 @@ const Modal = ({ setPlayerId, id, data, open, onClose }) => {
             <div>
               <div className='card-modal-image'>
                 <img
-                  src={process.env.PUBLIC_URL + `Images/jogadores/${data[id].foto}`}
+                  src={process.env.PUBLIC_URL + `/Images/jogadores/${data[id].foto}`}
                   alt={`Imagem do ${data[id].nome} jogador do palmeiras`}
                 />
               </div>

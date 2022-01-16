@@ -9,7 +9,7 @@ export const PlayerCard = ({ id, foto, nome, posicao, idade, jogos, gols, handle
     <div className="card">
       <div className='card-image'>
         <img
-          src={process.env.PUBLIC_URL + `Images/jogadores/${foto}`}
+          src={process.env.PUBLIC_URL + `/Images/jogadores/${foto}`}
           alt={`Imagem do ${nome} jogador do palmeiras`}
         />
       </div>
