@@ -1,6 +1,7 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import './styles.scss';
 import prop_types from 'prop-types';
+import { titleFilterAge } from '../../../constants/Filtros';
 
 export const Dropdown = ({ title, filter, onFilter }) => {
   const [dropdownValue, setDropdownValue] = useState(title);
@@ -25,7 +26,9 @@ export const Dropdown = ({ title, filter, onFilter }) => {
   const handleFilters = useCallback(() => {
     return (
       filter.map(currentFilter => (
-        <li key={currentFilter} onClick={e => handleDropdownValue(e)}>{currentFilter}</li>
+        <li key={currentFilter} onClick={e => handleDropdownValue(e)}>
+          {currentFilter} {title === titleFilterAge && 'anos'}
+        </li>
       ))
     )
   })

@@ -13,7 +13,7 @@ import { PlayerCard } from '../PlayerCard';
 import { Checkbox } from '../UI/Checkbox';
 import { Divisor } from '../UI/Divisor';
 import Modal from '../UI/Modal';
-import { handleOpenModal } from '../../utils';
+import { formatDropdownOption, handleOpenModal } from '../../utils';
 
 export const Jogadores = () => {
   const [data, setData] = useState([]);
@@ -34,9 +34,7 @@ export const Jogadores = () => {
   }, [])
 
   useEffect(() => {
-    if (!data) {
-      console.log('carregando');
-    }
+
     let filteredData = [];
 
     if (filterPosition === titleFilterPosition) {
@@ -48,8 +46,8 @@ export const Jogadores = () => {
     }
 
     if (filterAge !== titleFilterAge) {
-      const ageFormatted = filterAge.split('-');
-      filteredData = filteredData.filter(age => age.idade >= parseInt(ageFormatted[0]) && age.idade <= parseInt(ageFormatted[1]))
+      const ageFormatted = formatDropdownOption(filterAge)
+      filteredData = filteredData.filter(age => age.idade >= ageFormatted[0] && age.idade <= ageFormatted[1])
     }
 
     if (isCheckedGols) {
@@ -67,6 +65,7 @@ export const Jogadores = () => {
     const response = await fetch(`${process.env.PUBLIC_URL}/server/libertadores-palmeiras-teste-dev.json`, {
       headers: {
         'Content-Type': 'application/json',
+        'Cache-Control': 'max-age=31536000',
         Accept: 'application/json',
       },
     });
